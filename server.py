@@ -293,16 +293,22 @@ def get_expenses():
     }), 200
 
 
-# Frontend
+# Frontend 
 @app.get("/")
 def home():
     return render_template("home.html")
 
 @app.get("/about")
 def about():
-    my_name = "Tyler"
-    return render_template("about.html", name=my_name)
-        
+    return render_template("about.html")
+
+@app.get("/contact")
+def contact():
+    return render_template("contact.html")
+
+
+
+
 
 if __name__ == "__main__":
   init_db()
